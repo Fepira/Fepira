@@ -1,0 +1,120 @@
+//Curso de javascript, orientado al desarrollo web
+
+// Declaración de variables
+
+var numero = 2; // "var" declara e inicializa una variable que existe en todo el código
+let texto = "Hola"; // "let" declara e inicia una varaible que existe en un bloque de código
+const pi = 3.14 // " const" declara e inicia una variable que no cambiará nunca del valor asignado
+
+//Concatenación de cadenas de texto
+
+saludo = "!hola pedro!";
+pregunta =", ¿cómo estas?";
+frase = saludo + pregunta
+
+document.write(frase)
+
+//Concatenación de texto / uso de comillas y back tick (ctrl + alt + })
+
+nombre = "Félix Piñaleo";
+frase = `soy ${nombre} y estoy caminando`;
+
+document.write(frase)
+
+//Comparación
+
+let numero = 23;
+let numero2 = 13;
+let texto = "texto 1";
+let texto2 = "texto 2";
+let numerotxt = "23";
+
+document.write(texto == texto2) //Comparación de texto
+document.write(numero == numerotxt) //Comparación de numero y texto, da true
+document.write(numero === numerotxt) //Comparación de numero y texto, da falso, pues tambien compara el tipo de dato
+
+//Operadores lógicos
+
+let valor = true;
+let valor2 = true;
+
+let resultado = valor && valor2; //AND
+let resultado1 = valor || valor2; //OR
+let resultado3 = !valor; //NOT
+
+//Condicionales
+
+let nombre = "Félix"
+
+if (nombre == "Félix"){  // Bloque
+	alert("hola"); // Esto se va a ejecutar solamente si lo que está en () es verdadero
+} // Fin del bloque
+
+else if (nombre == "Piñaleo"){
+	alert(`Tu nombre es ${nombre}`);
+}
+
+else {
+	alert("Tu nombre es otro");
+}
+
+//--------------------------EJERCICIO 1-------------------------------------------
+
+// Mi primer programa en javascript
+
+
+dineroCofla = prompt("Cuánto dinero tienes Cofla?");
+dineroPedro = prompt("Cuánto dinero tienes Pedro?");
+dineroRoberto = prompt("Cuánto dinero tienes Roberto?");
+
+if (dineroCofla >= 0.6 && dineroCofla< 1){
+	alert("Cómprate el helado de agua")
+
+ }
+
+else if (dineroCofla >= 1 && dineroCofla< 1.6){
+	alert("Cómprate el helado de crema")
+
+}
+
+else if (dineroCofla >= 1.6 && dineroCofla< 2){
+	alert("Cómprate el helado de crema")
+
+}
+
+else if (dineroCofla >= 2 && dineroCofla< 2.5){
+	alert("Cómprate el helado de crema")
+
+}
+
+else if (dineroCofla >= 2.5 && dineroCofla< 3.1){
+	alert("Cómprate el helado de crema")
+
+}
+
+else{
+	alert("No te alcanza para nada")
+}
+
+
+// Forma profesional de hacerlo:
+
+"use strict";
+
+const definirCompra = (n)=>{
+	let din = prompt(`Dinero de ${n}`);
+	if (din >= 0.6 && din < 1) return (`${n}: helado de agua y te sobran ${din - 0.6}`);
+	if (din >= 1 && din < 1.6) return (`${n}: helado de crema`);
+	if (din >= 1.6 && din < 2) return (`${n}: helado de heladix`);
+	if (din >= 2 && din < 2.5) return (`${n}: helado de heladovish`);
+	if (din >= 2.5 && din < 3.1) return (`${n}: helado de helardo`);
+	if (din >= 3.1 && din < 4) return (`${n}: helado de confites o pote de 1/4 kg`);
+	else return (`${n}: No tienes dinero suficiente`);
+	
+}
+
+console.log(definirCompra("Cofla"));
+console.log(definirCompra("Pedro"));
+console.log(definirCompra("Roberto"));
+
+//----------------------------------------------------------------------------------------
